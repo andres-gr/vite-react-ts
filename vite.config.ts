@@ -15,11 +15,7 @@ export default defineConfig(configEnv => ({
         plugins: ['@emotion/babel-plugin'],
       },
     }),
-    tsconfigPaths(),
     linterPlugin({
-      build: {
-        includeMode: 'filesInFolder',
-      },
       include: [
         './src/**/*.ts',
         './src/**/*.tsx',
@@ -32,5 +28,6 @@ export default defineConfig(configEnv => ({
         new TypeScriptLinter(),
       ],
     }),
+    tsconfigPaths(),
   ],
 }))

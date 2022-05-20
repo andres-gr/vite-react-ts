@@ -109,12 +109,6 @@
     "no-nested-ternary": "off",
     "space-before-function-paren": "off",
     "no-underscore-dangle": "off",
-    "max-len": [
-      "error",
-      {
-        "code": 90
-      }
-    ],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -415,10 +409,20 @@
       {
         "groups": [
           [
+            "^react",
+            "^react-dom"
+          ],
+          [
+            "^react-?\\w"
+          ],
+          [
             "^\\u0000"
           ],
           [
             "^@?\\w"
+          ],
+          [
+            "^~?\\w"
           ],
           [
             "^\\.\\.(?!/?$)",
@@ -440,6 +444,16 @@
       "error",
       "string"
     ],
-    "@emotion/styled-import": "error"
+    "@emotion/styled-import": "error",
+    "no-restricted-exports": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "arrow-function",
+          "function-declaration"
+        ]
+      }
+    ]
   }
 }
